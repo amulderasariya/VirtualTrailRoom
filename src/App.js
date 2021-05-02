@@ -58,7 +58,6 @@ function App() {
   };
 
   useEffect(() => { runFacemesh() }, []);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -76,6 +75,7 @@ function App() {
             height: 480,
           }}
         />
+        {!state.faceWidth && <div className='loader'></div>}
         <CanvasModel
           headAngle={state.headAngle}
           faceWidth={state.faceWidth}
